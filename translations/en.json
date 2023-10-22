@@ -1,0 +1,41 @@
+{
+  "config": {
+    "error": {
+      "connection_problem": "Could not retrieve waterlevels",
+      "unknown": "Unknown error occured"
+    },
+    "abort": {
+      "already_configured": "This combination is already configured"
+    },
+    "step": {
+      "user": {
+        "title": "FMI Waterlevel",
+        "description": "FMI Waterlevel settings",
+        "data": {
+          "hours": "Hours of observation data to retrieve",
+          "forecast_hours": "Hours of forecast data to retrieve",
+          "location": "Mareograph location",
+          "step": "Time step between two values in minutes"
+        }
+      }
+    }
+  },
+  "options": {
+    "error": {
+      "invalid_auth": "Could not retrieve waterlevels",
+      "unknown": "Unknown error occured"
+    },
+    "step": {
+      "init": {
+        "title": "FMI Waterlevel",
+        "description": "FMI Waterlevel settings",
+        "data": {
+          "days": "Days to retrieve",
+          "maturity": "Maturity",
+          "location": "Mareograph location",
+          "step": "Time step between two values in minutes"
+        }
+      }
+    }
+  }
+}

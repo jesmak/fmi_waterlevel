@@ -1,0 +1,11 @@
+{
+  "codeowners": ["@jesmak"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/jesmak/fmi_waterlevel",
+  "domain": "fmi_waterlevel",
+  "iot_class": "cloud_polling",
+  "name": "FMI Waterlevel",
+  "requirements": [],
+  "version": "1.0.0"
+}
