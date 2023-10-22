@@ -41,7 +41,7 @@ One use case for this integration could be to show waterlevel values with [apexc
 
 Below is an example configuration for showing waterlevels (2 days of observations and 2 days of forecasts, 2 hour overlap).
 
-![euribor](https://user-images.githubusercontent.com/54674286/227618468-a86f770a-8d83-4e5d-a05c-8b06abfb1f39.png)
+![fmi_waterlevel](fmi_waterlevel.png)
 
 ```
 type: custom:apexcharts-card
