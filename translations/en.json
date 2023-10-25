@@ -15,7 +15,8 @@
           "hours": "Hours of observation data to retrieve",
           "forecast_hours": "Hours of forecast data to retrieve",
           "location": "Mareograph location",
-          "step": "Time step between two values in minutes"
+          "step": "Time step between two values in minutes",
+          "overlap": "Overlap between forecast and observations in minutes"
         }
       }
     }
@@ -33,7 +34,8 @@
           "days": "Days to retrieve",
           "maturity": "Maturity",
           "location": "Mareograph location",
-          "step": "Time step between two values in minutes"
+          "step": "Time step between two values in minutes",
+          "overlap": "Overlap between forecast and observations in minutes"
         }
       }
     }

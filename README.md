@@ -18,9 +18,9 @@ A custom component that integrates with Finnish Meteorological Institute to wate
 | Name           | Type    | Requirement  | Description                                     | Default |
 |----------------|---------| ------------ |-------------------------------------------------|---------|
 | location       | string  | **Required** | Target location from a predefined list          | Föglö   |
-| hours          | int     | **Required** | Number of hours of observations to retrieve     | 48      |
-| forecast_hours | int     | **Required** | Number of hours of forecasts to retrieve        | 48      |
-| step           | int     | **Required** | Time step between two values in minutes         | 15      |
+| hours          | int     | **Required** | Number of hours of observations to retrieve     | 36      |
+| forecast_hours | int     | **Required** | Number of hours of forecasts to retrieve        | 36      |
+| step           | int     | **Required** | Time step between two values in minutes         | 20      |
 | overlap        | int     | **Required** | Overlap of forecast and observations in minutes | 120     |
 
 ### State attributes

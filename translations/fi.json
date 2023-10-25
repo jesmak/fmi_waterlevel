@@ -15,7 +15,8 @@
           "hours": "Moneltako tunnilta mittausdata haetaan",
           "forecast_hours": "Moneltako tunnilta ennustedata haetaan",
           "location": "Mareografin sijainti",
-          "step": "Aikaväli kahden mitta-arvon välillä (minuuteissa)"
+          "step": "Aikaväli kahden mitta-arvon välillä minuuteissa",
+          "overlap": "Ennusteen ja mittausten päällekkäisyys minuuteissa"
         }
       }
     }
@@ -33,7 +34,8 @@
           "hours": "Moneltako tunnilta mittausdata haetaan",
           "forecast_hours": "Moneltako tunnilta ennustedata haetaan",
           "location": "Mareografin sijainti",
-          "step": "Aikaväli kahden mitta-arvon välillä (minuuteissa)"
+          "step": "Aikaväli kahden mitta-arvon välillä minuuteissa",
+          "overlap": "Ennusteen ja mittausten päällekkäisyys minuuteissa"
         }
       }
     }

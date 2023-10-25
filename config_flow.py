@@ -22,9 +22,9 @@ _LOGGER = logging.getLogger(__name__)
 CONFIGURE_SCHEMA = vol.Schema(
     {
         vol.Required(CONF_LOCATION): vol.All(cv.string, vol.In(FMISID_LOCATIONS)),
-        vol.Required(CONF_HOURS, default=48): cv.positive_int,
-        vol.Required(CONF_FORECAST_HOURS, default=48): cv.positive_int,
-        vol.Required(CONF_STEP, default=15): cv.positive_int,
+        vol.Required(CONF_HOURS, default=36): cv.positive_int,
+        vol.Required(CONF_FORECAST_HOURS, default=36): cv.positive_int,
+        vol.Required(CONF_STEP, default=20): cv.positive_int,
         vol.Required(CONF_OVERLAP, default=120): cv.positive_int,
     }
 )
@@ -50,7 +50,7 @@ async def validate_input(hass: HomeAssistant, data: dict[str, any]) -> str:
     except FMIWaterLevelException:
         raise ConnectionProblem
 
-    return fmisid
+    return data[CONF_LOCATION]
 
 
 class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
@@ -93,7 +93,8 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
         if user_input is None:
             return self.async_show_form(step_id="init", data_schema=vol.Schema(
                 {
-                    vol.Required(CONF_LOCATION, default=self._config_entry.data.get(CONF_LOCATION)): cv.positive_int
+                    vol.Required(CONF_OVERLAP, default=self._config_entry.data.get(CONF_OVERLAP)): cv.positive_int,
+                    vol.Required(CONF_STEP, default=self._config_entry.data.get(CONF_STEP)): cv.positive_int,
                 })
             )
 
@@ -101,6 +102,8 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
 
         try:
             user_input[CONF_LOCATION] = self._config_entry.data[CONF_LOCATION]
+            user_input[CONF_HOURS] = self._config_entry.data[CONF_HOURS]
+            user_input[CONF_FORECAST_HOURS] = self._config_entry.data[CONF_FORECAST_HOURS]
             await validate_input(self.hass, user_input)
         except ConnectionProblem:
             errors["base"] = "connection_problem"
