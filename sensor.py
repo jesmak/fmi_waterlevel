@@ -1,4 +1,5 @@
 import logging
+import math
 from datetime import (timedelta, datetime)
 from typing import Any, Callable, Dict, Optional
 
@@ -126,6 +127,8 @@ class FMIWaterLevelSensor(Entity):
             latest_waterlevel = None
 
             for entry in observation_data:
+                if math.isnan(float(entry[1])):
+                    continue
                 date = datetime.fromisoformat(entry[0])
                 waterlevel = f"{(float(entry[1]) / 10):.1f}"
 
@@ -136,6 +139,8 @@ class FMIWaterLevelSensor(Entity):
                 observations.append({ATTR_DATE: date, ATTR_WATERLEVEL: waterlevel})
 
             for entry in forecast_data:
+                if math.isnan(float(entry[1])):
+                    continue
                 date = datetime.fromisoformat(entry[0])
                 waterlevel = f"{float(entry[1]):.1f}"
                 forecast.append({ATTR_DATE: date, ATTR_WATERLEVEL: waterlevel})
