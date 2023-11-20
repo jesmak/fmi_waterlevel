@@ -24,8 +24,8 @@ CONFIGURE_SCHEMA = vol.Schema(
         vol.Required(CONF_LOCATION): vol.All(cv.string, vol.In(FMISID_LOCATIONS)),
         vol.Required(CONF_HOURS, default=36): cv.positive_int,
         vol.Required(CONF_FORECAST_HOURS, default=36): cv.positive_int,
-        vol.Required(CONF_STEP, default=20): cv.positive_int,
-        vol.Required(CONF_OVERLAP, default=120): cv.positive_int,
+        vol.Required(CONF_STEP, default=30): cv.positive_int,
+        vol.Required(CONF_OVERLAP, default=300): cv.positive_int,
     }
 )
 
