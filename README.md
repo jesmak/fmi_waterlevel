@@ -1,3 +1,5 @@
+# !!! **NO LONGER MAINTAINED** --- Use [fmi-integration](https://github.com/jesmak/fmi) instead !!! #
+
 # FMI waterlevels for Home Assistant
 
 ## What is it?
